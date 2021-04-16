@@ -21,7 +21,7 @@ from account.views import update_client_profile, create_client, get_client_profi
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # path('api/gateway-api', GatewayAPI.as_view({'post': 'list'}), name='gateway-api'),
+    path('api/gateway-api', GatewayAPI.as_view({'post': 'list'}), name='gateway-api'),
     path('api/client-register', create_client, name='client-register'),
     path('api/login', login_account, name='login'),
     path('api/client-profile-view', get_client_profile, name='client-profile-view'),
